@@ -15,7 +15,7 @@ class cuenta extends Model
     protected $fillable =[
 	'idbanco',
 	'idtipocuenta',
-	'numerodecuenta'
+	'numerodecuenta',
 	'idpersona'
     ];
 
