@@ -106,7 +106,7 @@
 	<div class="form-group">
 			<button class="btn btn-primary" type="submit">Guardar <i class="fa fa-floppy-o"></i></button>
 			<button class="btn btn-danger" type="reset">Restablecer <i class="fa fa-repeat"></i></button>
-			<a class="btn btn-primary" href="/compras/proveedor" role="button">Cancelar <i class="fa fa-ban"></i></a>
+			<a class="btn btn-primary" href="{{URL::to('compras/proveedor')}}" role="button">Cancelar <i class="fa fa-ban"></i></a>
 
 	</div>
 </div>

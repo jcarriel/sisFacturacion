@@ -24,21 +24,24 @@
 <div class="row">
 	<div class="col-lg-6 col-md-6 col-dm-12 col-xs-12">
 		<div class="form-group">
-			<label for="codigo">codigo - Maximo 27 Caracteres</label>
-			<input type="text" name="codigo" maxlength="27" required value="{{old('codigo')}}" class="form-control" placeholder="Codigo del articulo...">
+			<label for="codigo">Codigo</label>
+			<input type="text" name="codigo" maxlength="27" required value="{{old('codigo')}}" class="form-control"
+				placeholder="Codigo del articulo...">
 		</div>
 	</div>
 	<div class="col-lg-6 col-md-6 col-dm-6 col-xs-12">
 		<div class="form-group">
-			<label for="nombre">Descripcción Corta - Maximo 85 Caracteres</label>
-			<input type="text" name="nombre" maxlength="85" required value="{{old('nombre')}}" class="form-control" placeholder="Nombre...">
+			<label for="nombre">Descripcción Corta</label>
+			<input type="text" name="nombre" maxlength="85" required value="{{old('nombre')}}" class="form-control"
+				placeholder="Nombre...">
 		</div>
 	</div>
 
 	<div class="col-lg-4 col-md-4 col-dm-4 col-xs-12">
 		<div class="form-group">
 			<label>Categoria</label>
-			<select name="idcategoria" id="idcategoria" class="form-control selectpicker" data-size="5" data-live-search="true">
+			<select name="idcategoria" id="idcategoria" class="form-control selectpicker" data-size="5"
+				data-live-search="true">
 				@foreach ($categorias as $cat)
 				<option value="{{$cat->idcategoria}}"> {{$cat->nombre}} </option>
 				@endforeach
@@ -48,13 +51,14 @@
 	<div class="col-lg-2 col-md-4 col-dm-4 col-xs-12">
 		<div class="form-group">
 			<label for="stock">Stock</label>
-			<input type="number" name="stock" required value="{{0,old('stock')}}" class="form-control" placeholder="0">
+			<input type="number" name="stock" required value="{{0,old('stock')}}" class="form-control" placeholder="0"
+				minlength="1">
 		</div>
 	</div>
 	<div class="col-lg-2 col-md-4 col-dm-4 col-xs-12">
 		<div class="form-group">
-			<label for="iva">Iva</label>
-			<select name="impuesto" id="impuesto" class="form-control selectpicker">
+			<label for="iva">Ret. IVA &nbsp;&nbsp;</label><input type="checkbox" id="impuesto" onclick="chequear('impuesto')">
+			<select name="impuesto" id="impuesto" class="form-control selectpicker" disabled>
 				@foreach($impuestos as $impuestos)
 				<option value="{{$impuestos->valor}}">{{$impuestos->valor}}</option>
 				@endforeach
@@ -63,18 +67,18 @@
 	</div>
 	<div class="col-lg-2 col-md-4 col-dm-4 col-xs-12">
 		<div class="form-group">
-			<label for="ica">Rete ica</label>
-			<select name="reteica" id="reteica" class="form-control">
+			<label for="ice">Ret. ICE &nbsp;&nbsp;</label><input type="checkbox" id="reteica" onclick="chequear('reteica')">
+			<select name="reteica" id="reteica" class="form-control selectpicker" disabled>
 				@foreach($reteica as $reteica)
-				<option value="{{$reteica->estado}}">{{$reteica->estado}}</option>
+				<option value="{{$reteica->idica}}">{{$reteica->valor}}</option>
 				@endforeach
 			</select>
 		</div>
 	</div>
 	<div class="col-lg-2 col-md-4 col-dm-4 col-xs-12">
 		<div class="form-group">
-			<label for="retefuente">Rete Fuente</label>
-			<select name="retefuente" id="retefuente" class="form-control">
+			<label for="retefuente">Ret. Fuente &nbsp;&nbsp;</label><input type="checkbox" id="retefuente" onclick="chequear('retefuente')">
+			<select name="retefuente" id="retefuente" class="form-control selectpicker" disabled>
 				@foreach($retefuente as $retefuente)
 				<option value="{{$retefuente->valor}}">{{$retefuente->tipo}}</option>
 				@endforeach
@@ -91,7 +95,8 @@
 		<div class="col-lg-6 col-md-6 col-dm-12 col-xs-12">
 			<div class="form-group">
 				<label for="nombre">Proveedor</label>
-				<select name="idproveedor" id="idproveedor" class="form-control selectpicker" data-size="5" data-live-search="true">
+				<select name="idproveedor" id="idproveedor" class="form-control selectpicker" data-size="5"
+					data-live-search="true">
 					@foreach($personas as $persona)
 					<option value="{{$persona->idpersona}}">{{$persona->nombre}}</option>
 					@endforeach
@@ -102,14 +107,16 @@
 		<div class="col-lg-3 col-md-4 col-dm-4 col-xs-12">
 			<div class="form-group">
 				<label for="pcompra">Precio Compra sin IVA</label>
-				<input type="number" name="precio_compra" id="precio_compra" required value="{{old('precio_compra')}}" class="form-control" placeholder="$ 0">
+				<input type="number" name="precio_compra" id="precio_compra" required value="{{old('precio_compra')}}"
+					class="form-control" placeholder="$ 0">
 			</div>
 		</div>
 
 		<div class="col-lg-3 col-md-4 col-dm-4 col-xs-12">
 			<div class="form-group">
 				<label for="pventa">Precio Venta sin IVA</label>
-				<input type="number" name="precio_venta" id="precio_venta" required value="{{old('precio_venta')}}" class="form-control" placeholder="$ 0">
+				<input type="number" name="precio_venta" id="precio_venta" required value="{{old('precio_venta')}}"
+					class="form-control" placeholder="$ 0">
 			</div>
 		</div>
 
@@ -127,21 +134,24 @@
 		<div class="col-lg-3 col-md-4 col-dm-12 col-xs-12">
 			<div class="form-group">
 				<label for="serie_comprobante">Serie Comprobante</label>
-				<input type="text" name="serie_comprobante" readonly value="<?php echo date("Y-m-d"); ?>" class="form-control" placeholder="Serie de comprobante...">
+				<input type="text" name="serie_comprobante" readonly value="<?php echo date("Y-m-d"); ?>"
+					class="form-control" placeholder="Serie de comprobante...">
 			</div>
 		</div>
 
 		<div class="col-lg-3 col-md-4 col-dm-12 col-xs-12">
 			<div class="form-group">
 				<label for="numero_comprobante">Numero de Comprobante</label>
-				<input type="text" name="numero_comprobante" id="idingreso" required readonly value="{{$iingreso}}" class="form-control" placeholder="Numero de comprobante...">
+				<input type="text" name="numero_comprobante" id="idingreso" required readonly value="{{$iingreso}}"
+					class="form-control" placeholder="Numero de comprobante...">
 			</div>
 		</div>
 
 		<div class="col-lg-3 col-md-4 col-dm-12 col-xs-12">
 			<div class="form-group">
 				<label for="idarticulo">Id Articulo</label>
-				<input type="text" name="idarticulo" required readonly value="{{$idarticulo}}" class="form-control" placeholder="Numero de comprobante...">
+				<input type="text" name="idarticulo" required readonly value="{{$idarticulo}}" class="form-control"
+					placeholder="Numero de comprobante...">
 			</div>
 		</div>
 
@@ -153,8 +163,11 @@
 		</div>
 		<div class="col-lg-6 col-md-6 col-dm-6 col-xs-12">
 			<div class="form-group">
-				<button class="btn btn-primary" type="submit" id="guardar">Guardar <i class="fa fa-floppy-o"></i></button>
-				<a class="btn btn-danger" href="/almacen/articulo" role="button">Cancelar <i class="fa fa-ban"></i> </a>
+				<button class="btn btn-primary" type="submit" id="guardar">Guardar <i
+						class="fa fa-floppy-o"></i></button>
+				<button class="btn btn-danger" type="reset">Restablecer <i class="fa fa-repeat"></i></button>
+				<a class="btn btn-primary" href="{{URL::to('almacen/articulo')}}" role="button">Cancelar <i
+						class="fa fa-ban"></i></a>
 			</div>
 		</div>
 	</div>
@@ -179,5 +192,29 @@
 			}
 		}
 	</script>
+
+<script>
+	function chequear(chequeado){
+		var checkbox = document.getElementById(chequeado);
+		checkbox.addEventListener("change", comprueba, false);
+		
+		function comprueba(){
+			if(checkbox.checked){
+				console.log(chequeado)
+				var a = $('#chequeado').val($("#chequeado option:selected").text());
+				console.log(a.text())
+			}else{
+				console.log(chequeado)
+			}
+		}
+		function on(){
+			console.log("Hemos pulsado en on");
+		}
+
+		function off(){
+			console.log("Hemos pulsado en off");
+		}
+	}
+</script>
 	@endpush
 	@endsection

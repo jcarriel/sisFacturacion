@@ -4,7 +4,7 @@
 	<div class="col-lg-8 col-md-8 col-dm-8 col-xs-12">
 	<h3> Listado de Articulos <a href=""><button class="btn btn-success btn-xs" >Nuevo</button></a>
 	<a href="#"><button class="btn btn-info btn-xs">Imprimir Listado</button></a></h3>
-	{{-- @include('almacen.articulo.search') --}}
+	@include('almacen.articulo.search')
 	</div>
 </div>
 <div class="row">

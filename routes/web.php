@@ -16,9 +16,6 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
-Route::get('/articulos', 'ArticulosController@index')->name('articulos');
-Route::get('/articulos/new', 'ArticulosController@index')->name('articulos');
-
 Route::resource('almacen/categoria','CategoriaController');
 Route::resource('almacen/articulo','ArticuloController');
 Route::resource('proyectos','ProyectoController');

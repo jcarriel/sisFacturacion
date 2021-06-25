@@ -65,27 +65,47 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header"></li>
-            
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-laptop"></i>
-                <span>Almacén</span>
+                <span>Personas</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="{{route('articulos')}}"><i class="fa fa-circle-o"></i> Artículos</a></li>
-                <li><a href="{{URL::to('almacen/categoria')}}"><i class="fa fa-circle-o"></i> Categorías</a></li>
+                <li><a href="{{URL::to('compras/proveedor')}}"><i class="fa fa-circle-o"></i> Proveedores</a></li>
+              </ul>
+            </li>
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>Inventario</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="{{URL::to('almacen/articulo')}}"><i class="fa fa-circle-o"></i> Artículos</a></li>
+                <li><a href="{{URL::to('compras/ingreso')}}"><i class="fa fa-circle-o"></i> Ingresos</a></li>
+                <li class="treeview">
+                  <a href="#">
+                    <i class="fa fa-laptop"></i>
+                    <span>Mantenimiento</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                  </a>
+                  <ul class="treeview-menu">
+                    <li><a href="{{URL::to('almacen/categoria')}}"><i class="fa fa-circle-o"></i> Categorías</a></li>
+                    <li><a href="{{URL::to('almacen/categoria')}}"><i class="fa fa-circle-o"></i> SRI</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
             
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-th"></i>
-                <span>Inventario</span>
+                <span>Ver nombre</span>
                  <i class="fa fa-angle-left pull-right"></i> 
               </a>
               <ul class="treeview-menu">
-                <li><a href="{{URL::to('compras/ingreso')}}"><i class="fa fa-circle-o"></i> Ingresos</a></li>
                 <li><a href="{{URL::to('compras/proveedor')}}"><i class="fa fa-circle-o"></i> Proveedores</a></li>
                 <li><a href="{{URL::to('pedidos')}}"><i class="fa fa-circle-o"></i> Pedidos</a></li>
               </ul>
