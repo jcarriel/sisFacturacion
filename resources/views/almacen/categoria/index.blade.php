@@ -2,7 +2,8 @@
 @section ('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-dm-8 col-xs-12">
-	<h3> Listado de Categorias <a href="categoria/create"><button class="btn btn-success">Nuevo</button></a></h3>
+	<h3> Listado de Categorias <a href="categoria/create"><button class="btn btn-success btn-xs">Nuevo	<i class="fa fa-plus"></i>
+</button></a></h3>
 	@include('almacen.categoria.search')
 	</div>
 </div>
@@ -22,8 +23,9 @@
 		<td>{{$cat->nombre}}</td>
 		<td>{{$cat->descripcion}}</td>
 		<td>
-			<a href="{{URL::action('CategoriaController@edit',$cat->idcategoria)}}"><button class="btn btn-info">Editar </button></a>
-			<a href="" data-target="#modal-delete-{{$cat->idcategoria}}" data-toggle="modal"><button class="btn btn-danger">Eliminar </button></a>
+			<a href="{{URL::action('CategoriaController@edit',$cat->idcategoria)}}"><button class="btn btn-info">Editar <i class="fa fa-pencil-square-o"></i>
+ </button></a>
+			<a href="" data-target="#modal-delete-{{$cat->idcategoria}}" data-toggle="modal"><button class="btn btn-danger">Eliminar <i class="fa fa-trash-o"></i></button></a>
 		</td>
 	</tr>
 	@include('almacen.categoria.modal')

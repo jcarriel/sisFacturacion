@@ -9,6 +9,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap-select.min.css')}}">
      <!--<link rel="stylesheet" href="{{asset('css/select2-bootstrap.css')}}"> -->
@@ -29,10 +30,9 @@
 
         <!-- Logo -->
         <a href={{'proyectos'}} class="logo">
-          <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>VH</b>V</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>VHNGROUP</b></span>
+          <span class="logo-lg"><b>Creativos</b></span>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
@@ -81,7 +81,7 @@
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-th"></i>
-                <span>Compras</span>
+                <span>Inventario</span>
                  <i class="fa fa-angle-left pull-right"></i> 
               </a>
               <ul class="treeview-menu">
@@ -184,7 +184,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 1.0.0
         </div>
-        <strong>Copyright &copy; 2015-2020 <a href="www.vhngroup.com">VHNGROUP</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2015-2020 <a href="www.vhngroup.com">Creativos</a>.</strong> All rights reserved.
       </footer>
     <!-- jQuery 2.1.4 -->
     <script src="{{asset('js/modernizr-custom.js')}}"></script>
@@ -195,7 +195,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/bootstrap-select.min.js')}}"></script>
-    <script src="{{asset('js/app.min.js')}}"></script>      
+    <script src="{{asset('js/app.min.js')}}"></script>   
 
   </body>
 </html>

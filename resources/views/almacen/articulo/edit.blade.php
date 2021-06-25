@@ -62,7 +62,7 @@ echo Form::open(['url'=>'articulo.update']);
 			<label for="impuesto">impuesto</label>
 			<select name="impuesto" id="impuesto" selected="{{$articulo->impuesto}}" class="form-control">
 			@foreach($impuestos as $impuesto)
-			<option value="{{$articulo->impuesto}}">{{$impuesto->porcentaje}}</option>
+			<option value="{{$articulo->impuesto}}">{{$impuesto->valor}}</option>
 			@endforeach
 			</select>
 		</div>
@@ -84,8 +84,8 @@ echo Form::open(['url'=>'articulo.update']);
 </div>
 <div class="col-lg-6 col-md-6 col-dm-6 col-xs-12">
 	<div class="form-group">
-			<button class="btn btn-primary" type="submit">Guardar</button>
-			<button class="btn btn-danger" type="reset">Cancelar</button>
+			<button class="btn btn-primary" type="submit">Guardar <i class="fa fa-floppy-o"></i></button>
+			<button class="btn btn-danger" type="reset">Cancelar <i class="fa fa-ban"></i></button>
 	</div>
 </div>	
 

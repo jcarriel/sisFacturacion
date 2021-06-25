@@ -2,7 +2,7 @@
 @section ('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-dm-8 col-xs-12">
-	<h3> Listado de cotizaciones <a href="cotizaciones/create"><button class="btn btn-success">Nuevo</button></a></h3>
+	<h3> Listado de cotizaciones <a href="cotizaciones/create"><button class="btn btn-success btn-xs">Nuevo <i class="fa fa-plus"></i></button></a></h3>
 	@include('cotizaciones.search')
 	</div>
 </div>
@@ -27,9 +27,9 @@
 		<td>{{$ven->serie_comprobante.'-'.$ven->num_comprobante.'-'.$ven->estado}}</td>
 		<td>$ <?php echo number_format($ven->total_venta ,1,".",",");?></td>
 		<td>
-			<a href="{{URL::action('CotizacionController@show',$ven->idcotizacion)}}"><button class="btn btn-primary btn-xs">Detalles</button></a>
-			<a href="" data-target="#modal-delete-{{$ven->idcotizacion}}" data-toggle="modal"><button class="btn btn-danger btn-xs">Anular</button></a>
-		   	<a href="{{URL::action('CotizacionController@crear_pdf',$ven->idcotizacion)}}" target=newtab "><button class="btn btn-primary btn-xs">Imprimir</button></a>
+			<a href="{{URL::action('CotizacionController@show',$ven->idcotizacion)}}"><button class="btn btn-primary btn-xs">Detalles <i class="fa fa-pencil-square-o"></i></button></a>
+			<a href="" data-target="#modal-delete-{{$ven->idcotizacion}}" data-toggle="modal"><button class="btn btn-danger btn-xs">Anular</button> <i class="fa fa-trash-o"></i></a>
+		   	<a href="{{URL::action('CotizacionController@crear_pdf',$ven->idcotizacion)}}" target=newtab "><button class="btn btn-primary btn-xs">Imprimir <i class="fa fa-print"></i></button></a>
 		</td>
 	</tr>
 	@include('cotizaciones.modal')		

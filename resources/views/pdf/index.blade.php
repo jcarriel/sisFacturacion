@@ -7,7 +7,7 @@
                   <h3 class="box-title">REPORTES DEL SISTEMA</h3>
                   <div class="box-tools">
                     <div class="input-group" style="width: 150px;">
-                      <input type="text" name="table_search" class="form-control input-sm pull-right" placeholder="Search">
+                      <input type="text" name="table_search" class="form-control input-sm pull-right" placeholder="Buscar">
                       <div class="input-group-btn">
                         <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
                       </div>
@@ -19,16 +19,16 @@
                    
                     <thead><tr>
                       <th>ID</th>
-                      <th>reporte</th>
-                      <th>ver</th>
-                      <th>descargar</th>
+                      <th>Reporte</th>
+                      <th>Ver</th>
+                      <th>Descargar</th>
                     </tr></thead>
                     <tbody>
                     <tr>
                       <td>1</td>
                       <td>Reporte de ventas</td>
-                      <td><a href="crear_reporte_porventa/1" target="_blank" ><button class="btn btn-block btn-primary btn-xs">Ver</button></a></td>
-                      <td><a href="crear_reporte_porventa/2" target="_blank" ><button class="btn btn-block btn-success btn-xs">Descargar</button></a></td>
+                      <td><a href="crear_reporte_porventa/1" target="_blank" ><button class="btn btn-block btn-primary btn-xs">Ver <i class="fa fa-eye"></i></button></a></td>
+                      <td><a href="crear_reporte_porventa/2" target="_blank" ><button class="btn btn-block btn-success btn-xs">Descargar <i class="fa fa-download"></i></button></a></td>
                     </tr>
                    
                   </tbody></table>

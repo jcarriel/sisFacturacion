@@ -73,7 +73,7 @@
 		</table>
 		</div>
 		 <a href="{{URL::action('CotizacionController@crear_pdf',$cotizacion->idcotizacion)}}"><button class="btn btn-primary">Imprimir</button></a>
-		 <a class="btn btn-default" href="/cotizaciones" role="button">Cancelar</a>
+		 <a class="btn btn-default" href="/cotizaciones" role="button">Cancelar <i class="fa fa-ban"></i></a>
 		 <a class="btn btn-default" href="/ventas/venta" role="button">Regresar</a>
 	</div>
 	</div>

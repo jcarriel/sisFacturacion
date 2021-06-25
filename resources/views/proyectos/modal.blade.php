@@ -6,10 +6,10 @@
 			<button type="button" class="close" data-dismiss="modal aria-label="close">
 				<span aria-hidden="true">x</span>
 			</button>
-			<h4 class="modal-title">Cancelar Proyecto</h4>
+			<h4 class="modal-title">Cancelar <i class="fa fa-ban"></i> Proyecto</h4>
 		</div>
 		<div class="modal-body">
-			<p>Corfirme si desea cancelar el proyecto {{$pro->idproyecto}}</p>
+			<p>Corfirme si desea Cancelar <i class="fa fa-ban"></i> el proyecto {{$pro->idproyecto}}</p>
 		</div>
 		<div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>

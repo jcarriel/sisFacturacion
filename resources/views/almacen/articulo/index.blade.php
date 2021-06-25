@@ -2,8 +2,10 @@
 @section ('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-dm-8 col-xs-12">
-	<h3> Listado de Articulos <a href="articulo/create"><button class="btn btn-success btn-xs" >Nuevo</button></a>
-	<a href="#"><button class="btn btn-info btn-xs">Imprimir Listado</button></a></h3>
+	<h3> Listado de Articulos <a href="articulo/create"><button class="btn btn-success btn-xs btn-xs" >Nuevo <i class="fa fa-plus"></i></button></a>
+	<a href="#"><button class="btn btn-info btn-xs">Imprimir Listado
+	<i class="fa fa-print"></i>
+	</button></a></h3>
 	@include('almacen.articulo.search')
 	</div>
 </div>
@@ -29,8 +31,8 @@
 		<td>$ <?php echo number_format($art->precio_compra ,1,".",",");?></td>
 		<td>$ <?php echo number_format($art->precio_venta ,1,".",",");?></td>
 		<td>
-			<a href="{{URL::action('ArticuloController@edit',$art->idarticulo)}}"><button class="btn btn-info btn-xs">Editar</button></a>
-			<a href="" data-target="#modal-delete-{{$art->idarticulo}}" data-toggle="modal"><button class="btn btn-danger btn-xs">Eliminar </button></a>
+			<a href="{{URL::action('ArticuloController@edit',$art->idarticulo)}}"><button class="btn btn-info btn-xs">Editar <i class="fa fa-pencil-square-o"></i></button></a>
+			<a href="" data-target="#modal-delete-{{$art->idarticulo}}" data-toggle="modal"><button class="btn btn-danger btn-xs">Eliminar <i class="fa fa-trash-o"></i></button></a>
 		</td>
 	</tr>
 	@include('almacen.articulo.modal')

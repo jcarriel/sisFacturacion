@@ -129,9 +129,9 @@
 		<div class="col-lg-6 col-md-6 col-dm-6 col-xs-12" id="guardar1">
 					<div class="form-group">
 				<input name="_token" value="{{ csrf_token() }}" type="hidden"></input>
-						<button class="btn btn-primary" id="guardar"  type="submit">Guardar</button>
-						<button class="btn btn-danger" type="reset">Restablecer</button>
-						<a class="btn btn-primary" href="/pedidos" role="button">Cancelar</a>
+						<button class="btn btn-primary" id="guardar"  type="submit">Guardar <i class="fa fa-floppy-o"></i></button>
+						<button class="btn btn-danger" type="reset">Restablecer <i class="fa fa-repeat"></i></button>
+						<a class="btn btn-primary" href="/pedidos" role="button">Cancelar <i class="fa fa-ban"></i></a>
 		
 					</div>
 				</div>
@@ -147,7 +147,7 @@
 		$("#pidarticulo").change(mostrarValores);
 		$("#guardar").hide();
 		$(document).on('ready',function(){
-		$('select[name=idproveedor]').val(1);	
+		//$('select[name=idproveedor]').val(1);	
 		$('select[name=pidarticulo]').val(1);
 		$('.selectpicker').selectpicker('refresh')
 			mostrarValores();

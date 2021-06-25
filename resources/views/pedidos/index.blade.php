@@ -2,7 +2,7 @@
 @section ('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-dm-8 col-xs-12">
-	<h3> Listado de pedidos <a href="pedidos/create"><button class="btn btn-success">Nuevo</button></a></h3>
+	<h3> Listado de pedidos <a href="pedidos/create"><button class="btn btn-success btn-xs">Nuevo <i class="fa fa-plus"></i></button></a></h3>
 	@include('pedidos.search')
 	</div>
 </div>
@@ -26,9 +26,9 @@
 		<td>{{$ped->total_venta}}</td>
 		<td>{{$ped->estado}}</td>
 		<td>
-			<a href="{{URL::action('PedidoController@show',$ped->idpedido)}}"><button class="btn btn-primary">Detalles</button></a>
-			<a href="" data-target="#modal-delete-{{$ped->idpedido}}" data-toggle="modal"><button class="btn btn-danger">Anular</button></a>
-		   	<a href="{{URL::action('PedidoController@crear_pdf',$ped->idpedido)}}" target=newtab "><button class="btn btn-primary">Imprimir</button></a>
+			<a href="{{URL::action('PedidoController@show',$ped->idpedido)}}"><button class="btn btn-primary">Detalles <i class="fa fa-pencil-square-o"></i></button></a>
+			<a href="" data-target="#modal-delete-{{$ped->idpedido}}" data-toggle="modal"><button class="btn btn-danger">Anular <i class="fa fa-trash-o"></i></button></a>
+		   	<a href="{{URL::action('PedidoController@crear_pdf',$ped->idpedido)}}" target=newtab "><button class="btn btn-primary">Imprimir <i class="fa fa-print"></i></button></a>
 		</td>
 	</tr>
 	@include('pedidos.modal')		

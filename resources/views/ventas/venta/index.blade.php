@@ -2,7 +2,7 @@
 @section ('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-dm-8 col-xs-12">
-	<h3> Listado de ventas <a href="venta/create"><button class="btn btn-success">Nuevo</button></a></h3>
+	<h3> Listado de ventas <a href="venta/create"><button class="btn btn-success btn-xs">Nuevo <i class="fa fa-plus"></i></button></a></h3>
 	@include('ventas.venta.search')
 	</div>
 </div>
@@ -26,9 +26,9 @@
 		<td>$ <?php echo number_format($ven->total_venta ,1,".",",");?></td>
 		<td>{{$ven->estado}}</td>
 		<td>
-			<a href="{{URL::action('VentaController@show',$ven->idventa)}}"><button class="btn btn-primary btn-xs">Detalles</button></a>
-			<a href="{{URL::action('VentaController@edit',$ven->idventa)}}"><button class="btn btn-danger btn-xs">Editar</button></a>
-		    <a href="{{URL::action('VentaController@crear_pdf',$ven->idventa)}}" target=newtab "><button class="btn btn-primary btn-xs">Imprimir</button></a>
+			<a href="{{URL::action('VentaController@show',$ven->idventa)}}"><button class="btn btn-primary btn-xs">Detalles <i class="fa fa-eye"></i></button></a>
+			<a href="{{URL::action('VentaController@edit',$ven->idventa)}}"><button class="btn btn-danger btn-xs">Editar <i class="fa fa-pencil-square-o"></i></button></a>
+		    <a href="{{URL::action('VentaController@crear_pdf',$ven->idventa)}}" target=newtab "><button class="btn btn-primary btn-xs">Imprimir <i class="fa fa-print"></i></button></a>
 		</td>
 	</tr>
 	@include('ventas.venta.modal')	

@@ -25,8 +25,8 @@
 			<input type="text" name="descripcion" class="form-control" placeholder="descripcion...">
 		</div>
 		<div class="form-group">
-			<button class="btn btn-primary" type="submit">Guardar</button>
-			<button class="btn btn-danger" type="reset">Cancelar</button>
+			<button class="btn btn-primary" type="submit">Guardar <i class="fa fa-floppy-o"></i></button>
+			<button class="btn btn-danger" type="reset">Cancelar <i class="fa fa-ban"></i></button>
 		</div>
 	</div>
 </div>

@@ -3,9 +3,9 @@
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-dm-8 col-xs-12">
 	<h3> 
-		Listado de Proyectos <a href="proyectos/create"><button class="btn btn-primary">Nuevo</button></a> 
-		<a href="cotizaciones/create"><button class="btn btn-secondary">Cotizaciones</button></a>
-		<a href="ventas/venta/create"><button class="btn btn-secondary">Ventas</button></a>
+		Listado de Proyectos <a href="proyectos/create"><button class="btn btn-primary">Nuevo <i class="fa fa-plus"></i></button></a> 
+		<a href="cotizaciones/create"><button class="btn btn-secondary">Cotizaciones <i class="fa fa-line-chart"></i></button></a>
+		<a href="ventas/venta/create"><button class="btn btn-secondary">Ventas <i class="fa fa-cart-plus"></i></button></a>
 	</h3>
 	@include('proyectos.search')
 	</div>
@@ -44,9 +44,9 @@
 				@endif
 		@endif
 		<td>
-			<a href="{{URL::action('ProyectoController@show',$pro->idproyecto)}}"><button class="btn btn-primary btn-xs">Detalles</button></a>
-			<a href="{{URL::action('ProyectoController@edit',$pro->idproyecto)}}"><button class="btn btn-danger btn-xs">Editar</button></a>
-		    <a href="#" target=newtab "><button class="btn btn-primary btn-xs">Imprimir</button></a>
+			<a href="{{URL::action('ProyectoController@show',$pro->idproyecto)}}"><button class="btn btn-primary btn-xs">Detalles <i class="fa fa-eye"></i></button></a>
+			<a href="{{URL::action('ProyectoController@edit',$pro->idproyecto)}}"><button class="btn btn-danger btn-xs">Editar <i class="fa fa-pencil-square-o"></i></button></a>
+		    <a href="#" target=newtab "><button class="btn btn-primary btn-xs">Imprimir <i class="fa fa-print"></i></button></a>
 		</td>
 	</tr>
 	@include('proyectos.modal')	

@@ -40,7 +40,7 @@
     <table class="table table-striped table-bordered table-condensed table-hover">
         <thead>
         <th>  <div class="title">Whoo creo que algo anda mal.</div>
-                <a href="/ventas"><button class="btn btn-success" btn-lg>Regresar</button></a>
+                <a href="/ventas"><button class="btn btn-success btn-xs" btn-lg>Regresar</button></a>
                 </th>
                  <thead>
                  </table>

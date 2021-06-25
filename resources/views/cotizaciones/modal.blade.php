@@ -6,10 +6,10 @@
 			<button type="button" class="close" data-dismiss="modal aria-label="close">
 				<span aria-hidden="true">x</span>
 			</button>
-			<h4 class="modal-title">Cancelar Cotizacion</h4>
+			<h4 class="modal-title">Cancelar <i class="fa fa-ban"></i> Cotizacion</h4>
 		</div>
 		<div class="modal-body">
-			<p>Corfirme si desea cancelar la cotizacion {{$ven->idcotizacion}}</p>
+			<p>Corfirme si desea Cancelar <i class="fa fa-ban"></i> la cotizacion {{$ven->idcotizacion}}</p>
 		</div>
 		<div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>

@@ -36,7 +36,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Seneca, Sistema de Ventas de VHNGROUP') }}
+                    {{ config('app.name', 'Seneca, Sistema de Ventas de Creativos') }}
                 </a>
             </div>
 

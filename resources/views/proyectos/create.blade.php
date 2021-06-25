@@ -105,9 +105,9 @@
 		<div class="col-lg-6 col-md-6 col-dm-6 col-xs-12" id="guardar">
 				<div class="form-group">
 					<input name="_token" value="{{ csrf_token() }}" type="hidden" type="submit"></input>
-							<button class="btn btn-primary" id="guardar" onclick="evaluar()">Guardar</button>
-							<button class="btn btn-danger" type="reset">Restablecer</button>
-							<a class="btn btn-default" href="/sisventas/public/proyectos" role="button">Cancelar</a>
+							<button class="btn btn-primary" id="guardar" onclick="evaluar()">Guardar <i class="fa fa-floppy-o"></i></button>
+							<button class="btn btn-danger" type="reset">Restablecer <i class="fa fa-repeat"></i></button>
+							<a class="btn btn-default" href="/sisventas/public/proyectos" role="button">Cancelar <i class="fa fa-ban"></i></a>
 				</div>
 		</div>
 	</div>

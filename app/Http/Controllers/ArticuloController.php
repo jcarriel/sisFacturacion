@@ -53,7 +53,7 @@ class ArticuloController extends Controller
     public function store (ArticuloFormRequest $request)
     {
         try{
-             DB::beginTransaction();
+        DB::beginTransaction();
 		$articulo=new articulo;
 		$articulo->idcategoria=$request->get('idcategoria');
 		$articulo->codigo=$request->get('codigo');
@@ -69,7 +69,7 @@ class ArticuloController extends Controller
 				$file->move(public_path().'/imagenes/articulos/',$file->getClientOriginalName());
 				$articulo->imagen=$file->getClientOriginalName();
 			}
-				$articulo->save();
+		$articulo->save();
 
 		$ingreso=new ingreso();
         $ingreso->idproveedor=$request->get('idproveedor');
@@ -81,7 +81,7 @@ class ArticuloController extends Controller
         
         $ingreso->impuesto=(float)$request->get('impuesto');
         $ingreso->estado='A';
-        $ingreso->anticipo=0;
+        //$ingreso->anticipo=0;
         $ingreso->save();
 
 		$idarticulo=$request->get('idarticulo');

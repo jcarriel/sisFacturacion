@@ -6,10 +6,10 @@
 			<button type="button" class="close" data-dismiss="modal aria-label="close">
 				<span aria-hidden="true">x</span>
 			</button>
-			<h4 class="modal-title">Cancelar Pedido</h4>
+			<h4 class="modal-title">Cancelar <i class="fa fa-ban"></i> Pedido</h4>
 		</div>
 		<div class="modal-body">
-			<p>Corfirme si desea cancelar el pedido {{$ped->idpedido}}</p>
+			<p>Corfirme si desea Cancelar <i class="fa fa-ban"></i> el pedido {{$ped->idpedido}}</p>
 		</div>
 		<div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>

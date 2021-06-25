@@ -122,8 +122,8 @@
 
 <div class="col-lg-6 col-md-6 col-dm-6 col-xs-12">
 	<div class="form-group">
-			<button class="btn btn-primary" type="submit">Guardar</button>
-		 <a class="btn btn-default" href="/ventas/cliente" role="button">Cancelar</a>
+			<button class="btn btn-primary" type="submit">Guardar <i class="fa fa-floppy-o"></i></button>
+		 <a class="btn btn-default" href="/ventas/cliente" role="button">Cancelar <i class="fa fa-ban"></i></a>
 	</div>
 </div>
 </div>

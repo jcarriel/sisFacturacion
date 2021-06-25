@@ -3,7 +3,7 @@
 @section ('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-dm-8 col-xs-12">
-	<h3> Listado de ingreso <a href="ingreso/create"><button class="btn btn-success">Nuevo</button></a></h3>
+	<h3> Listado de ingreso <a href="ingreso/create"><button class="btn btn-success btn-xs">Nuevo <i class="fa fa-plus"></i></button></a></h3>
 	@include('compras.ingreso.search')
 	</div>
 </div>
@@ -29,8 +29,8 @@
 		<td>{{$ing->total}}</td>
 		<td>{{$ing->estado}}</td>
 		<td>
-			<a href="{{URL::action('IngresoController@show',$ing->idingreso)}}"><button class="btn btn-primary">Detalles</button></a>
-			<a href="" data-target="#modal-delete-{{$ing->idingreso}}" data-toggle="modal"><button class="btn btn-danger">Anular</button></a>
+			<a href="{{URL::action('IngresoController@show',$ing->idingreso)}}"><button class="btn btn-primary">Detalles <i class="fa fa-pencil-square-o"></i></button></a>
+			<a href="" data-target="#modal-delete-{{$ing->idingreso}}" data-toggle="modal"><button class="btn btn-danger">Anular <i class="fa fa-trash-o"></i></button></a>
 		</td>
 	</tr>
 	@include('compras.ingreso.modal')	

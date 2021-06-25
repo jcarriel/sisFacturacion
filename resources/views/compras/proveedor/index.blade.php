@@ -2,7 +2,7 @@
 @section ('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-dm-8 col-xs-12">
-	<h3> Listado de Proveedores <a href="proveedor/create"><button class="btn btn-success btn-xs">Nuevo</button></a></h3>
+	<h3> Listado de Proveedores <a href="proveedor/create"><button class="btn btn-success btn-xs btn-xs">Nuevo <i class="fa fa-plus"></i></button></a></h3>
 	@include('compras.proveedor.search')
 	</div>
 </div>
@@ -28,8 +28,8 @@
 		<td>{{$per->telefono}}</td>
 		<td>{{$per->email}}</td>
 		<td>
-			<a href="{{URL::action('ProveedorController@edit',$per->idpersona)}}"><button class="btn btn-info btn-xs">Editar </button></a>
-			<a href="" data-target="#modal-delete-{{$per->idpersona}}" data-toggle="modal"><button class="btn btn-danger btn-xs">Eliminar </button></a>
+			<a href="{{URL::action('ProveedorController@edit',$per->idpersona)}}"><button class="btn btn-info btn-xs">Editar <i class="fa fa-pencil-square-o"></i></button></a>
+			<a href="" data-target="#modal-delete-{{$per->idpersona}}" data-toggle="modal"><button class="btn btn-danger btn-xs">Eliminar <i class="fa fa-pencil-square-o"></i></button></a>
 		</td>
 	</tr>
 	@include('compras.proveedor.modal')	

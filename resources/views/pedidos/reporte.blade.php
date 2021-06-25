@@ -119,7 +119,7 @@
 </section>
 <footer>
             <img src="{{asset('imagenes/Footer.png')}}">
-      <div id="textfooter">VHNGROUP: Tecnologia Automatizando su Hogar. - Factura creada en fisico y digital - Desarrollador VNOGUERA
+      <div id="textfooter">Creativos: Tecnologia Automatizando su Hogar. - Factura creada en fisico y digital - Desarrollador Creativos
       </div>
 </footer>
 </body>
