@@ -1,10 +1,10 @@
 <?php
 
-namespace sisventas;
+namespace sisventas\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Detalle extends Model
+class Articulo extends Model
 {
     //
 }
