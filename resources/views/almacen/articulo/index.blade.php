@@ -35,7 +35,7 @@
 			<a href="" data-target="#modal-delete-{{$art->idarticulo}}" data-toggle="modal"><button class="btn btn-danger btn-xs">Eliminar <i class="fa fa-trash-o"></i></button></a>
 		</td>
 	</tr>
-	@include('almacen.articulo.modal')
+	{{-- @include('almacen.articulo.modal') --}}
 	@endforeach
 	</table>
 	</div>

@@ -25,7 +25,7 @@
 		<td>{{$art->nombre}}</td>
         <td>{{$art->stock}}</td>
 	</tr>
-	{{-- @include('almacen.articulo.modal')--}}
+	{{-- @include('almacen.articulo.modal') --}}
 	@endforeach 
 	</table>
 
