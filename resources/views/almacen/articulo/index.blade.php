@@ -20,7 +20,8 @@
 		<th class="col-sm-1">Stock</th>
 		<th class="col-sm-1">Precio Compra</th>
 		<th class="col-sm-1">Precio Venta</th>
-		<th class="col-sm-2">Opcciones</th>
+		<th class="col-sm-1">Estado</th>
+		<th class="col-sm-2">Opciones</th>
 	</thead>
 	@foreach ($articulos as $art)
 	<tr>
@@ -30,12 +31,13 @@
 		<td>{{$art->stock}}</td>
 		<td>$ <?php echo number_format($art->precio_compra ,1,".",",");?></td>
 		<td>$ <?php echo number_format($art->precio_venta ,1,".",",");?></td>
+		<td>{{$art->estado}}</td>
 		<td>
 			<a href="{{URL::action('ArticuloController@edit',$art->idarticulo)}}"><button class="btn btn-info btn-xs">Editar <i class="fa fa-pencil-square-o"></i></button></a>
 			<a href="" data-target="#modal-delete-{{$art->idarticulo}}" data-toggle="modal"><button class="btn btn-danger btn-xs">Eliminar <i class="fa fa-trash-o"></i></button></a>
 		</td>
 	</tr>
-	{{-- @include('almacen.articulo.modal') --}}
+	@include('almacen.articulo.modal')
 	@endforeach
 	</table>
 	</div>

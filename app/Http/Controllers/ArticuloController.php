@@ -13,6 +13,7 @@ use sisventas\ingreso;
 use sisventas\DetalledeIngreso; 
 use Carbon\Carbon;
 use DB;
+use Exception;
 
 class ArticuloController extends Controller
 { 
@@ -47,7 +48,8 @@ class ArticuloController extends Controller
     	$reteica=DB::table('ica')->where('Estado','=','A')->get();
     	$retefuente=DB::table('retefuente')->where('Estado','=','A')->get();
 		$categorias=DB::table('categoria')->where('condicion','=','1')->get();
-		return view("almacen.articulo.create",["categorias"=>$categorias, "personas"=>$personas, "iingreso"=>$iingreso, "impuestos"=>$impuestos, "reteica"=>$reteica, "retefuente"=>$retefuente, "idarticulo"=>$idarticulo]);
+		$secuencial=DB::table('secuenciales')->where('estado','=','A')->where('tabla','=','Articulos')->first();
+		return view("almacen.articulo.create",["categorias"=>$categorias, "personas"=>$personas, "iingreso"=>$iingreso, "impuestos"=>$impuestos, "reteica"=>$reteica, "retefuente"=>$retefuente, "idarticulo"=>$idarticulo,"secuencial"=>$secuencial]);
     }
 
     public function store (ArticuloFormRequest $request)
@@ -143,10 +145,14 @@ class ArticuloController extends Controller
 
 	public function destroy($id)
 	{
-	$articulo=Articulo::findOrFail($id);
-	$articulo->estado='Inactivo';
-	$articulo->update();
-	return Redirect::to('almacen/articulo');
+		try{
+		$articulo=Articulo::findOrFail($id);
+		$articulo->estado='Inactivo';
+		$articulo->update();
+		}catch(\Exception $e){
+			echo $e;
+		}
+		//return Redirect::to('almacen/articulo');
 	}
 	
 }

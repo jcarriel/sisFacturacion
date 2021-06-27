@@ -23,10 +23,10 @@
 
 <div class="row">
 	<div class="col-lg-6 col-md-6 col-dm-12 col-xs-12">
+		
 		<div class="form-group">
 			<label for="codigo">Codigo</label>
-			<input type="text" name="codigo" maxlength="27" required value="{{old('codigo')}}" class="form-control"
-				placeholder="Codigo del articulo...">
+			<input type="text" name="codigo" maxlength="27" required value="{{$secuencial->numero}}" class="form-control" readonly placeholder="Codigo del articulo...">
 		</div>
 	</div>
 	<div class="col-lg-6 col-md-6 col-dm-6 col-xs-12">
@@ -57,8 +57,8 @@
 	</div>
 	<div class="col-lg-2 col-md-4 col-dm-4 col-xs-12">
 		<div class="form-group">
-			<label for="iva">Ret. IVA &nbsp;&nbsp;</label><input type="checkbox" id="impuesto" onclick="chequear('impuesto')">
-			<select name="impuesto" id="impuesto" class="form-control selectpicker" disabled>
+			<label for="iva">Ret. IVA &nbsp;&nbsp;</label><input type="checkbox" id="iva" onclick="activar('impuesto',this)">
+			<select name="impuesto" id="impuesto" class="form-control selectpicker">
 				@foreach($impuestos as $impuestos)
 				<option value="{{$impuestos->valor}}">{{$impuestos->valor}}</option>
 				@endforeach
@@ -67,7 +67,7 @@
 	</div>
 	<div class="col-lg-2 col-md-4 col-dm-4 col-xs-12">
 		<div class="form-group">
-			<label for="ice">Ret. ICE &nbsp;&nbsp;</label><input type="checkbox" id="reteica" onclick="chequear('reteica')">
+			<label for="ice">Ret. ICE &nbsp;&nbsp;</label><input type="checkbox" id="ice" onclick="activar('reteica',this)">
 			<select name="reteica" id="reteica" class="form-control selectpicker" disabled>
 				@foreach($reteica as $reteica)
 				<option value="{{$reteica->idica}}">{{$reteica->valor}}</option>
@@ -77,7 +77,7 @@
 	</div>
 	<div class="col-lg-2 col-md-4 col-dm-4 col-xs-12">
 		<div class="form-group">
-			<label for="retefuente">Ret. Fuente &nbsp;&nbsp;</label><input type="checkbox" id="retefuente" onclick="chequear('retefuente')">
+			<label for="retefuente">Ret. Fuente &nbsp;&nbsp;</label><input type="checkbox" id="fuente" onclick="activar('retefuente',this)">
 			<select name="retefuente" id="retefuente" class="form-control selectpicker" disabled>
 				@foreach($retefuente as $retefuente)
 				<option value="{{$retefuente->valor}}">{{$retefuente->tipo}}</option>
@@ -194,25 +194,20 @@
 	</script>
 
 <script>
-	function chequear(chequeado){
-		var checkbox = document.getElementById(chequeado);
-		checkbox.addEventListener("change", comprueba, false);
-		
+	function activar(select,check){
+		// document.getElementById('reteica').removeAttribute("disabled");
+		$('#impuesto').prop('disabled', true);
+		check.addEventListener("change", comprueba, false);
 		function comprueba(){
-			if(checkbox.checked){
-				console.log(chequeado)
-				var a = $('#chequeado').val($("#chequeado option:selected").text());
-				console.log(a.text())
-			}else{
-				console.log(chequeado)
-			}
-		}
-		function on(){
-			console.log("Hemos pulsado en on");
-		}
+			if(check.checked){
 
-		function off(){
-			console.log("Hemos pulsado en off");
+				if (check.id == 'iva') {
+					console.log(select)
+					
+				}
+			}else{
+				console.log('off')
+			}
 		}
 	}
 </script>
