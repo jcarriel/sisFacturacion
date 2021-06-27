@@ -68,7 +68,7 @@
 	<div class="col-lg-2 col-md-4 col-dm-4 col-xs-12">
 		<div class="form-group">
 			<label for="ice">Ret. ICE &nbsp;&nbsp;</label><input type="checkbox" id="ice" onclick="activar('reteica',this)">
-			<select name="reteica" id="reteica" class="form-control selectpicker" disabled>
+			<select name="reteica" id="reteica" class="form-control selectpicker">
 				@foreach($reteica as $reteica)
 				<option value="{{$reteica->idica}}">{{$reteica->valor}}</option>
 				@endforeach
@@ -78,9 +78,9 @@
 	<div class="col-lg-2 col-md-4 col-dm-4 col-xs-12">
 		<div class="form-group">
 			<label for="retefuente">Ret. Fuente &nbsp;&nbsp;</label><input type="checkbox" id="fuente" onclick="activar('retefuente',this)">
-			<select name="retefuente" id="retefuente" class="form-control selectpicker" disabled>
+			<select name="retefuente" id="retefuente" class="form-control selectpicker">
 				@foreach($retefuente as $retefuente)
-				<option value="{{$retefuente->valor}}">{{$retefuente->tipo}}</option>
+				<option value="{{$retefuente->idretefuente}}">{{$retefuente->valor}}</option>
 				@endforeach
 			</select>
 		</div>

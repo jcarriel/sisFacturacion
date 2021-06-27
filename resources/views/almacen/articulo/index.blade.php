@@ -14,7 +14,6 @@
 	<div class="table-responsive">
 	<table class="table table-striped table-bordered table-condensed table-hover">
 	<thead>
-		<th class="col-sm-1">Id</th>
 		<th class="col-sm-3">Nombre</th>
 		<th class="col-sm-1">Código</th>
 		<th class="col-sm-1">Stock</th>

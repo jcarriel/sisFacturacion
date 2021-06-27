@@ -30,7 +30,7 @@ class ArticuloController extends Controller
     		$articulos=DB::table('articulo as a')
     		->join ('categoria as c','a.idcategoria','=','c.idcategoria')
     		->leftjoin('detalle_ingreso as dt', 'a.idarticulo', '=', 'dt.idarticulo')
-			->select('a.idarticulo','a.nombre', 'a.codigo', 'a.stock', 'c.nombre as categoria','a.descripcion', 'a.imagen', 'a.estado', 'a.impuesto', 'dt.precio_compra', 'dt.precio_venta','dt.iddetalle_ingreso')
+			->select('a.idarticulo','a.nombre', 'a.codigo', 'a.stock', 'c.nombre as categoria','a.descripcion', 'a.imagen', 'a.estado', 'a.iva', 'dt.precio_compra', 'dt.precio_venta','dt.iddetalle_ingreso')
     		->where('a.codigo','LIKE','%'.$query.'%')
             ->orwhere('a.nombre','LIKE','%'.$query.'%')
     		->orderBy('a.idarticulo','desc')->take(1)
@@ -61,7 +61,9 @@ class ArticuloController extends Controller
 		$articulo->codigo=$request->get('codigo');
 		$articulo->nombre=$request->get('nombre');
 		$articulo->stock=$request->get('stock');
-		$articulo->impuesto=(float)$request->get('impuesto');
+		$articulo->iva=(float)$request->get('impuesto');
+		$articulo->ice=(float)$request->get('reteica');
+		$articulo->retefuente=(float)$request->get('retefuente');
 		$articulo->descripcion=$request->get('descripcion');
 		$articulo->estado='Activo';
 
@@ -78,7 +80,7 @@ class ArticuloController extends Controller
         $ingreso->tipo_comprobante=$request->get('tipo_comprobante');
         $ingreso->serie_comprobante=$request->get('serie_comprobante');
         $ingreso->numero_comprobante=$request->get('numero_comprobante');
-        $mytime = Carbon::now('America/Bogota');
+        $mytime = Carbon::now('America/Guayaquil');
         $ingreso->fecha_hora=$mytime->toDateTimeString();
         
         $ingreso->impuesto=(float)$request->get('impuesto');

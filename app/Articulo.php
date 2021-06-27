@@ -14,7 +14,9 @@ class Articulo extends Model
 
     protected $fillable =[
 	'idcategoria',
-	'impuesto',
+	'iva',
+	'ice',
+	'retefuente',
 	'codigo',
 	'nombre',
 	'stock',
